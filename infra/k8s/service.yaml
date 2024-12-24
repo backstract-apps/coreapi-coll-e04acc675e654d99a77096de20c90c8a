@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coreapi-coll-e04acc675e654d99a77096de20c90c8a-srv
+spec:
+  selector:
+    app: coreapi-coll-e04acc675e654d99a77096de20c90c8a
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9019
+  type: ClusterIP

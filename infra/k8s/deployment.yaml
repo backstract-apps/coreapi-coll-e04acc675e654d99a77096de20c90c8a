@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coreapi-coll-e04acc675e654d99a77096de20c90c8a-depl
+  labels:
+    app: coreapi-coll-e04acc675e654d99a77096de20c90c8a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coreapi-coll-e04acc675e654d99a77096de20c90c8a
+  template:
+    metadata:
+      labels:
+        app: coreapi-coll-e04acc675e654d99a77096de20c90c8a
+    spec:
+      containers:
+        - name: coreapi-coll-e04acc675e654d99a77096de20c90c8a
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:coreapi-coll-e04acc675e654d99a77096de20c90c8a
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9019
